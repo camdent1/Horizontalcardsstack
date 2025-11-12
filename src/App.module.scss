@@ -1,0 +1,60 @@
+.app {
+  position: relative;
+
+  & > .window {
+    position: sticky;
+    top: 0;
+    height: 50vh;
+  }
+}
+
+.window {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & > .header {
+    margin-bottom: 2rem;
+  }
+
+  & > .cards {
+    flex-grow: 1;
+  }
+}
+
+.componentHorizontalStack {
+  display: grid;
+  align-items: stretch;
+
+  & > .item {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+
+    @media (min-aspect-ratio: 1 / 1) {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.item > * {
+  height: 100%;
+}
+
+.cardWrapper > * {
+  height: 50%;
+}
+
+.componentCard {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  box-shadow: var(--shadow);
+  color: white;
+  contain: layout;
+}

@@ -1,0 +1,51 @@
+html,
+body,
+#root {
+  background: #eee;
+}
+
+html {
+  font-size: clamp(16px, 3vw, 32px);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+:root {
+  --shadow-color: 0deg 0% 0%;
+  --shadow: -0.4px 0.3px 0.6px hsl(var(--shadow-color) / 0.11),
+    -4.5px 4.2px 6.9px -0.8px hsl(var(--shadow-color) / 0.11),
+    -13.5px 12.4px 20.6px -1.7px hsl(var(--shadow-color) / 0.11),
+    -35.1px 32.2px 53.6px -2.5px hsl(var(--shadow-color) / 0.11);
+}
